@@ -3,6 +3,7 @@ package org.Embarkx.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 
 @Entity(name = "orders")
 @Data
+@ToString(exclude = "items")
 @NoArgsConstructor
 public class Order extends BaseEntity{
 
